@@ -2,3 +2,7 @@ extends layout
 
 block content
   h1= title
+
+  form(name="logout" action="/admin/logout" method="post")
+    .form-floating
+      button(type="submit" class="btn btn-primary mb-3") Logout

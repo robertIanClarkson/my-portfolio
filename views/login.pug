@@ -1,8 +1,7 @@
 extends layout
 
 block content
-  h1= title
-
+  h1=title 
   form(name="login" action="/admin/login" onsubmit="return validateForm()" method="post")
     .form-floating
       input(type="text" name="username" class="form-control" id="floatingInput" placeholder="Username" required)
