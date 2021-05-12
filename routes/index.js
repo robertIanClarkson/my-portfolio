@@ -5,7 +5,7 @@ require('dotenv').config();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'index' });
+  res.render('index', { title: 'Robert Clarkson', css: 'index.css' });
 });
 
 module.exports = router;

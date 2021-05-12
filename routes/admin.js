@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
-const { getAdmin } = require('../db/helpers');
 const { passport } = require('../passport/index');
 
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
-    res.render('admin', { title: 'admin' });
+    res.render('admin', { title: 'Admin Console', css: 'admin.css' });
   } else {
     res.redirect('/admin/login');
   }
@@ -15,7 +14,7 @@ router.get('/login', function(req, res, next) {
   if (req.isAuthenticated()) {
     res.redirect('/admin');
   } else {
-    res.render('login', { title: 'Login' });
+    res.render('login', { title: 'Admin Login', css: 'login.css' });
   }
 });
 
