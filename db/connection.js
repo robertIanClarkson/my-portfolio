@@ -8,7 +8,8 @@ AWS.config.update({
 });
 
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
-
+const s3 = new AWS.S3();
 module.exports = {
-  dynamoClient
+  dynamoClient,
+  s3
 }

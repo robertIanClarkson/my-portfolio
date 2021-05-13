@@ -1,4 +1,4 @@
-const { dynamoClient } = require('./connection');
+const { dynamoClient, s3 } = require('./connection');
 const { v1 } = require('uuid');
 
 function getAllItems(tableName) {
@@ -81,9 +81,26 @@ function getProjects() {
   });
 }
 
+function getImage(filename) {
+  var params = {
+    Bucket: 'my-portfolio-clarkson',
+    Key: 'images/' + filename
+  };
+  return new Promise((resolve, reject) => {
+    s3.getObject(params, function(err, data) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  })
+}
+
 module.exports = {
   getAllItems,
   getAdmin,
   createProject,
-  getProjects
+  getProjects,
+  getImage
 }
