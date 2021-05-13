@@ -20,7 +20,6 @@ router.get('/:filename', function(req, res, next) {
   let filename = req.params.filename;
   getImage(filename)
     .then((data) => {
-      console.log(data)
       res.setHeader('Content-Length', data.ContentLength)
       res.setHeader('Content-Type', data.ContentType)
       res.send(data.Body)
