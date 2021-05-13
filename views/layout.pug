@@ -10,7 +10,8 @@ html(lang="en")
 
     // My CSS
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/' + css)
+    if css
+      link(rel='stylesheet', href='/stylesheets/' + css)
 
     title= title
     
@@ -22,3 +23,7 @@ html(lang="en")
     
     // Bootstrap JS Bundle
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous")
+    script(src="/javascripts/components/navbar.js")
+    script(src="/javascripts/components/footer.js")
+    if js
+      script(src="/javascripts/" + js)
