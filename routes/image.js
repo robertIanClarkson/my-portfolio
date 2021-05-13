@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Robert Clarkson', css: 'index.css' });
+router.get('/:filename', function(req, res, next) {
+  let filename = req.params.filename;
 });
+
 
 module.exports = router;

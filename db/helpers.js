@@ -1,4 +1,5 @@
 const { dynamoClient } = require('./connection');
+const { v1 } = require('uuid');
 
 function getAllItems(tableName) {
   const params = {
@@ -13,8 +14,8 @@ function getAllItems(tableName) {
         resolve(data)
       }
     });
-  })
-}
+  });
+};
 
 function getAdmin(username) {
   var params = {
@@ -24,7 +25,7 @@ function getAdmin(username) {
     ExpressionAttributeValues: {
       ':user': username
     }
-  };
+  }; 
 
   return new Promise((resolve, reject) => {
     dynamoClient.query(params, function (err, data) {
@@ -38,10 +39,51 @@ function getAdmin(username) {
         }
       }
     });
-  })
+  });
+};
+
+function createProject(name, description) {
+  let id = v1();
+
+  var params = {
+    TableName: 'Projects',
+    Item:{
+      "project_id": id,
+      "name": name,
+      "description": description
+    }
+  };
+
+  return new Promise((resolve, reject) => {
+    dynamoClient.put(params, function(err, data) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+};
+
+function getProjects() {
+  var params = {
+    TableName: "Projects"
+  };
+
+  return new Promise((resolve, reject) => {
+    dynamoClient.scan(params, function(err, data) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
 }
 
 module.exports = {
   getAllItems,
-  getAdmin
+  getAdmin,
+  createProject,
+  getProjects
 }

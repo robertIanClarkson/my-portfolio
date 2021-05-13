@@ -10,6 +10,7 @@ var passport = require("passport");
 
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
+var imageRouter = require('./routes/image');
 
 var app = express();
 
@@ -23,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({ secret: "cats" }));
+app.use(session({ secret: "Josie" }));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(passport.initialize());
@@ -31,6 +32,7 @@ app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
+app.use('/image', imageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
