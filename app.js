@@ -13,6 +13,7 @@ var passport = require("passport");
 var sassMiddleware = require('node-sass-middleware'); 
 
 var indexRouter = require('./routes/index');
+var portfolioRouter = require('./routes/portfolio');
 var projectRouter = require('./routes/projects');
 var aboutRouter = require('./routes/about');
 var contactRouter = require('./routes/contact');
@@ -52,6 +53,7 @@ app.use(passport.session());
 
 
 app.use('/', indexRouter);
+app.use('/portfolio', portfolioRouter);
 app.use('/projects', projectRouter);
 app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
