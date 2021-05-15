@@ -87,7 +87,14 @@ p.overline {
 #nav a {
   margin-top: .5em;
   width: 90%;
-  /* border-radius: 2em; */
+}
+
+#nav i {
+  font-size: 1.5em;
+}
+
+#nav span {
+  padding-left: 1em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -112,6 +119,7 @@ p.overline {
 /* CONTENT */
 #content {
   margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 /* MISC */
