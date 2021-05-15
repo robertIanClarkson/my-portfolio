@@ -4,9 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// passport
 var session = require("express-session");
 var bodyParser = require("body-parser");
 var passport = require("passport");
+
+// Sass
+var sassMiddleware = require('node-sass-middleware'); 
 
 var indexRouter = require('./routes/index');
 var projectRouter = require('./routes/projects');
@@ -26,13 +30,26 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// sass
+app.use(sassMiddleware({
+  /* Options */
+  src: path.join(__dirname, 'scss'),
+  dest: path.join(__dirname, 'public'),
+  debug: true,
+  outputStyle: 'compressed',
+  // prefix:  '/stylesheet'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
+// passport
 app.use(session({ secret: "Josie" }));
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 app.use('/', indexRouter);
 app.use('/projects', projectRouter);
