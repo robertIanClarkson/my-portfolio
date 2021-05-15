@@ -1,11 +1,57 @@
 extends layout
 
 block content
-  .text-center
-    h1 Hello
+  
+    h1.text-center Hello
     br
     .container
-      img.img-fluid.rounded-circle.mx-auto.d-block(src="/images/profile_pic.jpg")
+      img#profile-pic.img-fluid.rounded-circle.mx-auto.d-block(src="/images/profile_pic.jpg")
     br
-    h2 I am glad you are here...
-    p Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+    .container
+      //- p.overline intro
+      #intro.text-center.description.container-fluid
+        h5.lh-base Welcome to my personal website. Here you can learn more about me and what I do.
+        h5.lh-base In short, people know me as a "jack of all trades". 
+        h5.lh-base In fact, I am the first person many people call when something has gone wrong.  
+      br
+      hr
+      br
+      p.overline Portfolio
+      #portfolio.text-center.description.container-fluid
+        .row.align-items-center
+          .col-12.col-md-8
+            h6.lh-base If you are interested in learning more about some of the work listed on my resume. 
+            h5.lh-base Check out my porfolio.
+          .col-12.col-md-4 
+            img.img-fluid.rounded-circle.mx-auto.d-block(src="/images/logo.png")
+      br
+      hr
+      br
+      p.overline.text-left Projects
+      #projects.text-center.description.container-fluid
+        .row.align-items-center
+          .col-12.col-md-8
+            h6.lh-base I work on all types of stuff. Not all of it is computer related. To learn more about me and what I do in my spare time.
+            h5.lh-base Check out some of my projects.
+          .col-12.col-md-4 
+            img.img-fluid.rounded-circle.mx-auto.d-block(src="/images/logo.png")
+      br
+      hr
+      br
+      p.overline.text-left About
+      #about.text-center.description.container-fluid
+        .row.align-items-center
+          .col-12.col-md-8
+            h5.lh-base I've got a lot to say! Come learn about me, my past, and my future (I hope).
+          .col-12.col-md-4 
+            img.img-fluid.rounded-circle.mx-auto.d-block(src="/images/logo.png")
+      br
+      hr
+      br
+      p.overline.text-left Contact
+      #contact.text-center.description.container-fluid
+        .row.align-items-center
+          .col-12.col-md-8
+            h5.lh-base Want to get in touch?
+          .col-12.col-md-4 
+            img.img-fluid.rounded-circle.mx-auto.d-block(src="/images/logo.png")
