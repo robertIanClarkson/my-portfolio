@@ -1,8 +1,43 @@
-body {
-  /* padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+/* CONTENT */
+#content {
+  margin-top: 3em;
 }
 
-a {
-  color: #00B7FF;
+/* NAV */
+#nav {
+  background: linear-gradient(to bottom, #66ffcc 0%, #ffffff 100%);
+  /* display: grid;
+  align-items: center; */
+  /* margin-bottom: 2em; */
+}
+
+#nav img {
+  width: 50%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#nav a {
+  margin-top: .5em;
+  width: 90%;
+  /* border-radius: 2em; */
+}
+
+@media only screen and (min-width: 768px) {
+  /* sidebar */
+  #nav {
+    background: linear-gradient(to right, #66ffcc 0%, #ffffff 100%);
+    position: fixed;
+    height: 100%;
+    padding-top: 3em;
+  }
+
+  #nav img {
+    width: 80%;
+  }
+
+  #nav a {
+    margin-top: 1em;
+    width: 70%;
+  }
 }

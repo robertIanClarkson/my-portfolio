@@ -9,8 +9,12 @@ var bodyParser = require("body-parser");
 var passport = require("passport");
 
 var indexRouter = require('./routes/index');
+var projectRouter = require('./routes/projects');
+var aboutRouter = require('./routes/about');
+var contactRouter = require('./routes/contact');
 var adminRouter = require('./routes/admin');
 var imageRouter = require('./routes/image');
+
 
 var app = express();
 
@@ -31,6 +35,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', indexRouter);
+app.use('/projects', projectRouter);
+app.use('/about', aboutRouter);
+app.use('/contact', contactRouter);
 app.use('/admin', adminRouter);
 app.use('/images', imageRouter);
 
