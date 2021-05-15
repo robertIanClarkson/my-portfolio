@@ -2,3 +2,32 @@ extends layout
 
 block content
   h1= title
+
+  #new-project 
+    h3 New Project
+    form(name="project" action="/admin/project" method="post")
+      .form-floating
+        input(type="text" name="name" class="form-control" id="floatingInput" placeholder="Name" required)
+        label(for="floatingInput") Project Name
+      .form-floating
+        textarea(class="form-control" name="description" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px")
+        label(for="floatingTextarea2") Project Description
+      .form-floating
+        button(type="submit" class="btn btn-primary mb-3") Create New Project
+
+  #new-post 
+    h3 New Post
+    form(name="project" action="/admin/project" method="post")
+      .form-floating
+        select(class="form-select" aria-label="Default select example")
+          option(selected) Open this select menu
+          each item in projects.Items
+            option(value=item.project_id)=item.name
+      .form-floating
+        input(type="text" name="name" class="form-control" id="floatingInput" placeholder="Name" required)
+        label(for="floatingInput") Post Title
+      .form-floating
+        textarea(class="form-control" name="description" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px")
+        label(for="floatingTextarea2") Project Description
+      .form-floating
+        button(type="submit" class="btn btn-primary mb-3") Create New Post
