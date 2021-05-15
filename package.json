@@ -9,6 +9,7 @@
   "dependencies": {
     "aws-sdk": "^2.906.0",
     "body-parser": "^1.18.3",
+    "bootstrap": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^9.0.2",

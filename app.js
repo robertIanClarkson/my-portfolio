@@ -34,11 +34,11 @@ app.use(cookieParser());
 // sass
 app.use(sassMiddleware({
   /* Options */
-  src: path.join(__dirname, 'scss'),
+  src: path.join(__dirname, 'sass'),
   dest: path.join(__dirname, 'public'),
   debug: true,
-  outputStyle: 'compressed',
-  // prefix:  '/stylesheet'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
+  indentedSyntax: true,
+  outputStyle: 'compressed'
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
