@@ -1,4 +1,6 @@
 $gradient: #66ccff
+$card-gradient: #66ffcc
+$trans-time: .1s
 
 #nav 
   background: linear-gradient(to bottom, $gradient 0%, #ffffff 100%)
@@ -6,3 +8,29 @@ $gradient: #66ccff
 @media only screen and (min-width: 768px)
   #nav
     background: linear-gradient(to right, $gradient 0%, #ffffff 100%)
+
+/* Portfolio */
+.card-custom
+  width: 70%
+  background: linear-gradient(to bottom left, $gradient 0%, $card-gradient 100%)
+  border-radius: 1em
+  -webkit-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.25)
+  box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.25)
+
+  img
+    border-radius: 1em  
+    -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.25)
+    box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.25)    
+
+
+@media only screen and (min-width: 768px)
+  .card-custom
+    width: 90%
+    img
+      border-radius: 1em  
+      -webkit-box-shadow: 6px 0px 10px 0px rgba(0,0,0,0.25)
+      box-shadow: 6px 0px 10px 0px rgba(0,0,0,0.25)
+
+    
+
+
