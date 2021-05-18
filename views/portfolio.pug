@@ -1,10 +1,10 @@
 extends layout
 
 block content
-  h1.p-3=title
+  h1.p-3.text-wrap.text-break=title
   .container-fluid
   if !portfolioItems
-    h2.p-5.text-danger.text-center Woops, I seem to have failed to get my portfolio items.
+    h2.p-5.text-danger.text-center.text-wrap.text-break Woops, I seem to have failed to get my portfolio items.
   else
     each item in portfolioItems
       .card-custom.mx-auto.m-4
@@ -13,12 +13,10 @@ block content
             .col-12.col-lg-3
               img.img-fluid.mx-auto.d-block(src=item.image)
             .col-12.col-lg-9.p-4
-              h4.title=item.title
-              p.body2.lh-base=item.description
-              .row
-                .col-4 
-                .col-8
-                  p.body1.text-muted.text-end= item.from + ' - ' + item.to
+              h5.title.text-wrap.text-break=item.title
+              p.body2.lh-base.text-wrap.text-break=item.description
+              p.body2.text-muted.text-end.text-wrap.text-break= item.from + ' - ' + item.to
+      
      
  
             
