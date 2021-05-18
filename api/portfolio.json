@@ -1,7 +1,7 @@
 [
   {
     "link": "https://github.com/robertIanClarkson/SFSU-Connect#readme",
-    "image": "/images/profile_pic.jpg",
+    "image": "/images/sfsu-connect.png",
     "title": "SFSU Connect",
     "description": "A buy & sell website focused on San Francisco State University students and faculty. An excellent example of working in a team environment with a mock CEO, CTO, Milestones, and Deadlines.",
     "from": "August 2020",
@@ -9,7 +9,7 @@
   },
   {
     "link": "https://github.com/robertIanClarkson/Drone-Prototyping-Application#readme",
-    "image": "/images/profile_pic.jpg",
+    "image": "/images/drone-mount.png",
     "title": "Drone Prototyping Application",
     "description": "A website to be hosted on a raspberry pi for easy of access when prototyping with brushless motors and orientation sensors.",
     "from": "July 2020",
@@ -17,7 +17,7 @@
   },
   {
     "link": "https://github.com/psmith586/QuarantineMemo#readme",
-    "image": "/images/profile_pic.jpg",
+    "image": "/images/process.png",
     "title": "Quarantine Memo",
     "description": "Health Symptoms Tracking for COVID-19. Submission for 2020 Google Solutions Challenge.",
     "from": "February 2020",
@@ -25,7 +25,7 @@
   },
   {
     "link": "https://github.com/sfsu-csc-667-fall-2018/Spades-Online-Multiplayer-Website#readme",
-    "image": "/images/profile_pic.jpg",
+    "image": "/images/portfolio/",
     "title": "Spades! Online Multiplayer Website",
     "description": "An online multiplayer experience for the card game Spades. Includes a game lobby and game rooms. Gameplay follows the official Spades rules.",
     "from": "February 2020",
@@ -33,7 +33,7 @@
   },
   {
     "link": "https://github.com/robertIanClarkson/P2P-Decentralized-Network#readme",
-    "image": "/images/profile_pic.jpg",
+    "image": "/images/portfolio/",
     "title": "P2P Decentralized Network",
     "description": "A lite version of Peer-to-peer software. Developed as a team remotely. End goal was to send a large file from peer to peer using BitTorrent protocol. Uses both UDP and TCP. Excellent example of using OOP to solve a complex issue with many moving parts.",
     "from": "October 2020",

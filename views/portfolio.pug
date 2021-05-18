@@ -7,10 +7,10 @@ block content
     h2.p-5.text-danger.text-center.text-wrap.text-break Woops, I seem to have failed to get my portfolio items.
   else
     each item in portfolioItems
-      .card-custom.mx-auto.m-4
+      .card-custom.mx-auto.m-4.gradient
         a(href=item.link target="_blank")
           .row.align-items-center
-            .col-12.col-lg-3
+            .col-12.col-lg-3.p-4
               img.img-fluid.mx-auto.d-block(src=item.image)
             .col-12.col-lg-9.p-4
               h5.title.text-wrap.text-break=item.title
