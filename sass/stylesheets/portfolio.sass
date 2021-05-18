@@ -1,6 +1,6 @@
 $gradient: #66ccff
-$card-gradient: #66ffcc
-$card-gradient-hover: #ffffff
+$card-gradient: #ffffff
+$card-gradient-hover: #66ffcc
 
 #nav
   background: linear-gradient(to bottom, $gradient 0%, #ffffff 100%)
@@ -24,7 +24,7 @@ $card-gradient-hover: #ffffff
 
 .gradient
   position: relative
-  background-image: linear-gradient(to bottom left, $gradient 0%, $card-gradient 100%)
+  background-image: linear-gradient(to bottom right, $gradient 0%, $gradient 100%)
   z-index: 1
 
 .gradient::before
@@ -35,9 +35,9 @@ $card-gradient-hover: #ffffff
   right: 0
   bottom: 0
   left: 0
-  background-image: linear-gradient(to bottom left, $gradient 0%, $card-gradient-hover 100%)
+  background-image: linear-gradient(to top left, $gradient 0%, $card-gradient-hover 100%)
   z-index: -1
-  transition: opacity 0.5s ease
+  transition: opacity 1s ease
   opacity: 0
 
 .gradient:hover::before
